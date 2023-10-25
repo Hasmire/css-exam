@@ -7,7 +7,6 @@ type Props = {
 const Post = (props: Props) => {
   const { src, title, date } = props;
 
-  console.log(src);
   return (
     <div
       className="relative flex h-[315px] w-[315px] transform-gpu cursor-pointer flex-col justify-end bg-neutrals-lightGray bg-cover bg-center transition duration-300 hover:scale-110"

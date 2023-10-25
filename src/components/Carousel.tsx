@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Post from './Post';
 
 type PostType = {
@@ -8,47 +9,51 @@ type PostType = {
 
 type Props = {
   posts: PostType[];
-  activeIndex: number;
-  onPeriodClick: (index: number) => void;
 };
 
 const Carousel = (props: Props) => {
-  const { posts, activeIndex, onPeriodClick } = props;
+  const { posts } = props;
 
-  const startIndex = activeIndex - 1 < 0 ? posts.length - 1 : activeIndex - 1;
-  const endIndex = (activeIndex + 2) % posts.length;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % (posts.length / 4));
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [activeIndex, posts.length, setActiveIndex]);
+
+  const handlePeriodClick = (index: number) => {
+    setActiveIndex(index);
+  };
+
+  const groupedPosts = [];
+  for (let i = 0; i < posts.length; i += 4) {
+    groupedPosts.push(posts.slice(i, i + 4));
+  }
 
   return (
-    <div>
-      <div className="mt-8 flex items-center justify-center gap-9">
-        {posts.map((post, index) => (
-          <div
-            key={index}
-            style={{
-              display:
-                index === activeIndex ||
-                index === startIndex ||
-                index === endIndex
-                  ? 'block'
-                  : 'none',
-            }}
-          >
+    <>
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-9">
+        {groupedPosts[activeIndex].map((post, index) => (
+          <div key={index}>
             <Post src={post.src} title={post.title} date={post.date} />
           </div>
         ))}
       </div>
-      <div className="mt-4 flex justify-center">
-        {posts.map((_, index) => (
+      <div className="mt-6 flex justify-center">
+        {groupedPosts.map((_group, index) => (
           <div
             key={index}
             className={`mx-2 h-4 w-4 cursor-pointer rounded-full ${
-              index === activeIndex ? 'bg-primary' : 'bg-gray-300'
+              index === activeIndex ? 'bg-primary' : 'bg-neutrals-gray'
             }`}
-            onClick={() => onPeriodClick(index)}
+            onClick={() => handlePeriodClick(index)}
           ></div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
