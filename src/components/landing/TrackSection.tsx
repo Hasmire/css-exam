@@ -6,7 +6,7 @@ const TrackSection = () => {
   return (
     <LandingLayout>
       <div className="text-3xl font-extrabold text-primary">Tracks</div>
-      <div className="mt-8 flex gap-9">
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-9">
         {trackData.map((data, index) => (
           <Track
             key={index}
@@ -15,7 +15,7 @@ const TrackSection = () => {
             title={data.title}
             body={data.body}
           />
-        ))}{' '}
+        ))}
       </div>
     </LandingLayout>
   );
