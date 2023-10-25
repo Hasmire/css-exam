@@ -4,7 +4,7 @@ import LandingLayout from '../layout/LandingLayout';
 
 const LatestPostSection = () => {
   return (
-    <LandingLayout>
+    <LandingLayout hideBanner>
       <div className="text-3xl font-extrabold text-primary">Latest Post</div>
       <Carousel posts={postData} />
     </LandingLayout>
