@@ -1,18 +1,30 @@
+import { useEffect, useState } from 'react';
 import { postData } from '../../constants/postData';
-import Post from '../Post';
+import Carousel from '../Carousel';
 import LandingLayout from '../layout/LandingLayout';
 
 const LatestPostSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % postData.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handlePeriodClick = (index: number) => {
+    setActiveIndex(index);
+  };
+
   return (
     <LandingLayout>
       <div className="text-3xl font-extrabold text-primary">Latest Post</div>
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-9">
-        {postData.map((post, index) => (
-          <div key={index}>
-            <Post src={post.src} title={post.title} date={post.date} />
-          </div>
-        ))}
-      </div>
+      <Carousel
+        posts={postData}
+        activeIndex={activeIndex}
+        onPeriodClick={handlePeriodClick}
+      />
     </LandingLayout>
   );
 };
