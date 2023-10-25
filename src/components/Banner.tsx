@@ -1,4 +1,4 @@
-import Image from '/newLogo.png';
+import Image from '/newLogoResized.png';
 
 const Banner = () => {
   return (
@@ -7,7 +7,8 @@ const Banner = () => {
         className="h-[75px] w-full bg-repeat-x"
         style={{
           backgroundImage: `url(${Image})`,
-          backgroundSize: '75px',
+          backgroundSize: '150px',
+          backgroundPosition: '70px 0',
         }}
       ></div>
     </div>
