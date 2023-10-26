@@ -1,4 +1,4 @@
-import Image from '/Logo.png';
+import Image from '/logo.png';
 
 type Props = {
   className?: string;

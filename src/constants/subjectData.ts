@@ -12,25 +12,25 @@ export interface SubjectData {
 export const subjectData: SubjectData = {
   'Data Science': [
     {
-      src: './stock.jpeg',
+      src: './stock/01.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 1C',
       title: 'Data Warehousing',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/02.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 2C',
       title: 'Machine Learning',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/03.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 3C',
       title: 'Data Analysis and Visualization',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/04.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 4C',
       title: 'Data Mining',
@@ -38,37 +38,37 @@ export const subjectData: SubjectData = {
   ],
   'Core Science': [
     {
-      src: './stock.jpeg',
+      src: './stock/05.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 1A',
       title: 'Advanced Intelligent Systems',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/06.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 2C',
       title: 'Compiler Design',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/07.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 3C',
       title: 'Natural Language Processing',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/08.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 4C',
       title: 'Empathic Computing',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/09.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 5C',
       title: 'Random Subject',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/10.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 6C',
       title: 'Added Subject',
@@ -76,25 +76,25 @@ export const subjectData: SubjectData = {
   ],
   'Game Development': [
     {
-      src: './stock.jpeg',
+      src: './stock/11.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 1B',
       title: 'Game Theory and Design',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/12.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 2B',
       title: 'Game Programming I',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/13.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 3B',
       title: 'Game Programming II',
     },
     {
-      src: './stock.jpeg',
+      src: './stock/14.jpg',
       alt: 'add alt text here',
       code: 'CS ELEC 4B',
       title: 'Game Production',

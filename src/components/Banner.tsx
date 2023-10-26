@@ -1,4 +1,4 @@
-import Image from '/newLogoResized.png';
+import Image from '/banner.png';
 
 const Banner = () => {
   return (
