@@ -15,7 +15,7 @@ const SubjectsButton = (props: Props) => {
       : '';
 
   return (
-    <div className="mt-8 flex gap-4">
+    <div className="mt-8 flex flex-wrap justify-center gap-4">
       <Button
         className={getActiveClass('Data Science')}
         onClick={() => onClick('Data Science')}

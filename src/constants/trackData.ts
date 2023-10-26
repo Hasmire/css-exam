@@ -9,7 +9,7 @@ export const trackData = [
     src: './stock.jpeg',
     alt: 'Core Science Image',
     title: 'Core Science',
-    body: 'Core sciences are the fundamental disciplines that contribute to our understanding of the world. They include physics, chemistry, biology, and earth sciences.',
+    body: 'Core computer science encompasses the foundational disciplines driving technological understanding and development, including algorithms, data structures, and software engineering principles.',
   },
   {
     src: './stock.jpeg',

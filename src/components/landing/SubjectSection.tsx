@@ -16,15 +16,16 @@ const SubjectSection = () => {
   return (
     <LandingLayout>
       <div className="text-3xl font-extrabold text-primary">Subjects</div>
-      <div className="mt-2 w-[524px] text-center text-lg font-medium">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
-        tempor incididunt ut
+      <div className="mt-2 w-3/4 text-center font-medium md:w-2/5 md:text-lg">
+        Discover data science, core computer science, and game development
+        tracks, each offering a unique dive into the world of technology and
+        digital innovation
       </div>
       <SubjectsButton
         activeSpecialization={currentSpecialization}
         onClick={handleSubjectChange}
       />
-      <div className="mt-8 grid grid-cols-3 justify-items-center gap-9">
+      <div className="mt-8 grid grid-cols-1 justify-items-center gap-9 sm:grid-cols-2 md:grid-cols-3">
         {currentSpecialization.map((data, index) => (
           <Subjects
             key={index}
