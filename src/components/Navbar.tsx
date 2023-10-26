@@ -10,7 +10,7 @@ const Navbar = () => {
           <a
             key={index}
             href={link.href}
-            className="cursor-pointer hover:underline"
+            className="underline-offset-4 hover:underline"
           >
             {link.label}
           </a>
