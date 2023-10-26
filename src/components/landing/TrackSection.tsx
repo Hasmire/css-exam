@@ -4,7 +4,7 @@ import LandingLayout from '../layout/LandingLayout';
 
 const TrackSection = () => {
   return (
-    <LandingLayout>
+    <LandingLayout id="tracks">
       <div className="text-3xl font-extrabold text-primary">Tracks</div>
       <div className="mt-8 flex flex-wrap items-center justify-center gap-9">
         {trackData.map((data, index) => (

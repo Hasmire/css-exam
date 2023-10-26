@@ -1,5 +1,6 @@
 import Button from '../Button';
 import LandingLayout from '../layout/LandingLayout';
+import { Link } from 'react-scroll';
 
 const HeroSection = () => {
   return (
@@ -9,9 +10,15 @@ const HeroSection = () => {
       </div>
       <div className="mt-3.5 text-center text-lg font-medium">#SayYesToCSS</div>
       <div className="mt-12 flex gap-2.5">
-        <Button>#tracks</Button>
-        <Button>#subjects</Button>
-        <Button>#latestpage</Button>
+        <Link to="tracks" smooth={true} duration={500}>
+          <Button>#tracks</Button>
+        </Link>
+        <Link to="subjects" smooth={true} duration={500}>
+          <Button>#subjects</Button>
+        </Link>
+        <Link to="latestPage" smooth={true} duration={500}>
+          <Button>#latestpage</Button>
+        </Link>
       </div>
     </LandingLayout>
   );

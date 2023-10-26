@@ -14,7 +14,7 @@ const SubjectSection = () => {
   };
 
   return (
-    <LandingLayout>
+    <LandingLayout id="subjects">
       <div className="text-3xl font-extrabold text-primary">Subjects</div>
       <div className="mt-2 w-3/4 text-center font-medium md:w-2/5 md:text-lg">
         Discover data science, core computer science, and game development
